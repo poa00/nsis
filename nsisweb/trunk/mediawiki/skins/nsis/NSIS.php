@@ -130,7 +130,7 @@ class NSISTemplate extends QuickTemplate {
    */
   function execute() {
 		// Suppress warnings to prevent notices about missing indexes in $this->data
-		wfSuppressWarnings();
+		Wikimedia\AtEase\AtEase::suppressWarnings();
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="<?php $this->text('xhtmldefaultnamespace') ?>" <?php 
@@ -308,7 +308,7 @@ class NSISTemplate extends QuickTemplate {
   </body>
 </html>
 <?php
-	wfRestoreWarnings();
+	Wikimedia\AtEase\AtEase::suppressWarnings($end=true);
 	}
 }
 ?>

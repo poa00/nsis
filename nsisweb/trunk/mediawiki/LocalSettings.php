@@ -54,7 +54,9 @@ $wgUploadDirectory  = "$IP/images";
 $wgFileExtensions   = array( 'png', 'gif', 'jpg', 'jpeg', 'zip', '7z', 'nsi', 'nsh' );
 
 $wgEmergencyContact = "kichik@users.sourceforge.net";
-$wgPasswordSender	= "kichik@users.sourceforge.net";
+$wgPasswordSender   = "kichik@users.sourceforge.net";
+
+$wgServer           = "https://nsis.sourceforge.io";
 
 require_once("/home/project-web/nsis/nsisweb.cfg.php");
 
