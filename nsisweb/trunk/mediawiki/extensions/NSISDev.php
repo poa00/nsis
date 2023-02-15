@@ -11,7 +11,7 @@ function wfNSISDev() {
 
 function getTimeStamp($file) {
 	global $wgParser;
-	$wgParser->disableCache();
+	$wgParser->getOutput()->updateCacheExpiry(0);
 	return gmdate('D, d M Y, H:i', filemtime($file)) . ' GMT';
 }
 
@@ -32,7 +32,7 @@ function showChangeLog($linesPerPage) {
 	$wgThisLink = $wgTitle->getText();
 
 	// Disable cache
-	$wgParser->disableCache();
+	$wgParser->getOutput()->updateCacheExpiry(0);
 
 	// Initialize output
 	$output = '';

@@ -9,7 +9,7 @@ function wfNewsRSS() {
 
 function NewsRSS() {
 	global $wgParser;
-	$wgParser->disableCache();
+	$wgParser->getOutput()->updateCacheExpiry(0);
 	return file_get_contents('/home/project-web/nsis/news.rss.html');
 }
 
